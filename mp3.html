@@ -16,9 +16,10 @@
 </head>
 
 <body>
-    <nav class="z-depth-0">
-        <div class="nav-wrapper white z-depth-0">
+    <nav class="white z-depth-0">
+        <div class="nav-wrapper z-depth-0">
             <a href="index.html" class="brand-logo white black-text" style="padding-left: 3%;">ktran.info</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a class="black-text" href="experience.html">experience</a></li>
                 <li><a class="black-text" href="projects.html">personal projects</a></li>
@@ -27,6 +28,13 @@
             </ul>
         </div>
     </nav>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a class="black-text" href="experience.html">experience</a></li>
+        <li><a class="black-text" href="projects.html">personal projects</a></li>
+        <li><a class="black-text" href="35mm.html">35mm</a></li>
+        <li><a class="black-text" href="mp3.html">.mp3</a></li>
+    </ul>
+
     <div class="container" style="height:100vh">
         <!-- Page Content goes here -->
         <div class="row center" style="padding-left: 5%; padding-right: 5%; padding-top: 8%; padding-bottom: 5%; height:100%">
@@ -38,7 +46,7 @@
             
             <div class="row center" style="padding-top:1%;margin:auto; height: 100%; width: 80%;">
                 <div class="col s4"><p style="margin:0;float:left">"<span>5am 145</span>"</p></div>
-                <div class="col s4"><div id="play-btn" style="margin:auto"></div></div>
+                <div class="col s4"><div id="play-btn" style="margin:auto;cursor: pointer;"></div></div>
                 <div class="col s4"><p style="margin:0;float:right" class="start-time">00:00</p></div>
             </div>
             <div class="audio-wrapper" id="player-container" href="javascript:;">
@@ -54,6 +62,12 @@
         <!--JavaScript at end of body for optimized loading-->
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script>
+
+            $(document).ready(function(){
+                $('.sidenav').sidenav();
+            });
+
+
             var i = 0;
             var txt = "My music. I play the piano, but I also like guitar and the harmonica.";
             var speed = 50;
@@ -72,6 +86,8 @@
                 $('.carousel').carousel('next');
                 setTimeout(autoplay, 5000);
             }
+
+
         </script>
         <script>
             function initProgressBar() {

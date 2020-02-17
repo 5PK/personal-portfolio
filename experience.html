@@ -15,9 +15,10 @@
 </head>
 
 <body>
-    <nav class="z-depth-0">
-        <div class="nav-wrapper white z-depth-0">
+    <nav class="white z-depth-0">
+        <div class="nav-wrapper z-depth-0">
             <a href="index.html" class="brand-logo white black-text" style="padding-left: 3%;">ktran.info</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a class="black-text" href="experience.html">experience</a></li>
                 <li><a class="black-text" href="projects.html">personal projects</a></li>
@@ -26,6 +27,12 @@
             </ul>
         </div>
     </nav>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a class="black-text" href="experience.html">experience</a></li>
+        <li><a class="black-text" href="projects.html">personal projects</a></li>
+        <li><a class="black-text" href="35mm.html">35mm</a></li>
+        <li><a class="black-text" href="mp3.html">.mp3</a></li>
+    </ul>
     <div class="container">
         <!-- Page Content goes here -->
         <div class="row center" style="padding-left: 5%; padding-right: 5%; padding-top: 8%; padding-bottom: 5%;">
@@ -74,7 +81,7 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script>
         $(document).ready(function () {
-
+            $('.sidenav').sidenav();
 
         });
     </script>
