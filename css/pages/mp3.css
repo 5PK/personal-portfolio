@@ -1,0 +1,9 @@
+#play-btn {
+  background-image: url('../../media/images/play.png');
+  background-size: cover;
+  width:20px;
+  height: 20px;
+}
+#play-btn.pause {
+  background-image: url('../../media/images/pause.png');
+}
